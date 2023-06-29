@@ -7,6 +7,7 @@ local settings = {
         title = "Header",
         margin = 5,
         content = require("startup.headers").hydra_header,
+       --  content = {"This is my logo"},
         highlight = "Statement",
         default_color = "",
         oldfiles_amount = 0,
