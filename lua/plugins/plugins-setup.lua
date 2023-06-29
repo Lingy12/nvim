@@ -64,7 +64,14 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.1',  -- file explore
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-
+  
+  use {
+    "startup-nvim/startup.nvim",
+    requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+    config = function()
+      require"startup".setup(require("plugins.startup_conf"))
+    end
+  }
   if packer_bootstrap then
     require('packer').sync()
   end
