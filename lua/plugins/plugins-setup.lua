@@ -72,6 +72,19 @@ return require('packer').startup(function(use)
       require"startup".setup(require("plugins.startup_conf"))
     end
   }
+
+  use "stevearc/dressing.nvim"
+  use({
+    "ziontee113/icon-picker.nvim",
+    config = function()
+      require("icon-picker").setup({
+        disable_legacy_commands = true
+      })
+    end,
+  })
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end}
   if packer_bootstrap then
     require('packer').sync()
   end
