@@ -14,7 +14,7 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 keymap.set("n", "<S-L>", ":bnext<CR>")
 keymap.set("n", "<S-H>", ":bprev<CR>")
-keymap.set("n", "<S-C>", ":bd<CR>")
+keymap.set("n", "<S-C>", ":BufDel<CR>")
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 

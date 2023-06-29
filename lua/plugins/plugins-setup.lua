@@ -90,7 +90,8 @@ return require('packer').startup(function(use)
     'renerocksai/telekasten.nvim',
     requires = {'nvim-telescope/telescope.nvim'}
   }
-
+  
+  use {'ojroques/nvim-bufdel'}
   if packer_bootstrap then
     require('packer').sync()
   end
