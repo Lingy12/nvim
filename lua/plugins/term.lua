@@ -14,3 +14,4 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 vim.keymap.set('n', '<CS-t>', "<cmd>ToggleTerm<CR>")
 vim.keymap.set('n', '<CS-s>', "<cmd>TermSelect<CR>")
+vim.keymap.set('n', '<CS-a>', "<cmd>ToggleTermToggleAll<CR>")
