@@ -97,6 +97,16 @@ return require('packer').startup(function(use)
     "FeiyouG/command_center.nvim",
     requires = { "nvim-telescope/telescope.nvim" }
   }
+  
+  use({
+      "kylechui/nvim-surround",
+      tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+      config = function()
+          require("nvim-surround").setup({
+              -- Configuration here, or leave empty to use defaults
+          })
+      end
+  })
 
   if packer_bootstrap then
     require('packer').sync()
