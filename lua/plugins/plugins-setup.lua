@@ -92,6 +92,12 @@ return require('packer').startup(function(use)
   }
   
   use {'ojroques/nvim-bufdel'}
+  
+  use {
+    "FeiyouG/command_center.nvim",
+    requires = { "nvim-telescope/telescope.nvim" }
+  }
+
   if packer_bootstrap then
     require('packer').sync()
   end

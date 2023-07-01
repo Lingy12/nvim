@@ -1,5 +1,6 @@
 local builtin = require('telescope.builtin')
 
+require('telescope').load_extension("command_center")
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})  
