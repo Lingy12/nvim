@@ -56,6 +56,8 @@ command_center.add({
   }
 })
 
+-- short cut for command command_center
+keymap.set("n", "<leader>cc", "<cmd>Telescope command_center<CR>")
 -- keymap.set("i", "jk", "<ESC>")
 --
 -- keymap.set("v", "J", ":m '>+1<CR>gv=gv")
