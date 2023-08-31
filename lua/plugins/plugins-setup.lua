@@ -107,7 +107,8 @@ return require('packer').startup(function(use)
           })
       end
   })
-
+  
+   use {'Vigemus/iron.nvim'}
   if packer_bootstrap then
     require('packer').sync()
   end
