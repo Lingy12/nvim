@@ -1,5 +1,7 @@
 require("plugins.plugins-setup")
 
+require('plugins/commander')
+
 require("core.options")
 require("core.keymaps")
 

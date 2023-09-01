@@ -94,7 +94,7 @@ return require('packer').startup(function(use)
   use {'ojroques/nvim-bufdel'}
   
   use {
-    "FeiyouG/command_center.nvim",
+    "FeiyouG/commander.nvim",
     requires = { "nvim-telescope/telescope.nvim" }
   }
   

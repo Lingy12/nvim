@@ -1,4 +1,4 @@
-local command_center = require("command_center")
+local command_center = require("commander")
 vim.g.mapleader = " "
 
 local keymap = vim.keymap
@@ -57,7 +57,7 @@ command_center.add({
 })
 
 -- short cut for command command_center
-keymap.set("n", "<leader>cc", "<cmd>Telescope command_center<CR>")
+keymap.set("n", "<leader>cc", "<cmd>Telescope commander<CR>")
 -- keymap.set("i", "jk", "<ESC>")
 --
 -- keymap.set("v", "J", ":m '>+1<CR>gv=gv")
