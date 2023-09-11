@@ -1,4 +1,4 @@
-command_center = require("command_center")
+command_center = require("commander")
 
 function _G.set_terminal_keymaps()
   local opts = {buffer = 0}

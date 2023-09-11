@@ -109,6 +109,12 @@ return require('packer').startup(function(use)
   })
   
    use {'Vigemus/iron.nvim'}
+
+  -- use {'iamcco/markdown-preview.nvim'}
+use({
+    "iamcco/markdown-preview.nvim",
+    run = 'cd app && yarn install',
+})
   if packer_bootstrap then
     require('packer').sync()
   end
