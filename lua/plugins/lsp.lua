@@ -16,8 +16,8 @@ require("mason-lspconfig").setup({
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-require("lspconfig").lua_ls.setup {
+vim.lsp.enable('lua_ls',{
    capabilities = capabilities,
-}
+})
 
-require("lspconfig").pyright.setup{}
+vim.lsp.enable('pyright')
