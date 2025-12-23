@@ -1,5 +1,18 @@
 local builtin = require('telescope.builtin')
+local actions = require('telescope.actions')
 local command_center = require("commander")
+
+-- Configure telescope with buffer deletion mappings
+require('telescope').setup({
+  defaults = {
+    mappings = {
+      n = {
+        ["<C-d>"] = actions.delete_buffer,
+        ["dd"] = actions.delete_buffer,
+      },
+    },
+  },
+})
 
 command_center.add({
   {

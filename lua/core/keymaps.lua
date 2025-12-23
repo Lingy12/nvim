@@ -55,7 +55,7 @@ command_center.add({
   {
     desc = "Close current buffer",
     cmd = ":BufDel<CR>",
-    keys = {"n", "S-C"},
+    keys = {"n", "<S-C>"},
     cat = "Buffers"
   },
   {

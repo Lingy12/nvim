@@ -97,7 +97,21 @@ return require('packer').startup(function(use)
     "FeiyouG/commander.nvim",
     requires = { "nvim-telescope/telescope.nvim" }
   }
-  
+
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup({
+        -- leave empty to use default settings
+      })
+
+      -- Set up the buffer local keymaps
+      vim.keymap.set("n", "<leader>?", function()
+        require("which-key").show({ global = false })
+      end, { desc = "Buffer Local Keymaps (which-key)" })
+    end
+  }
+
   use({
       "kylechui/nvim-surround",
       tag = "*", -- Use for stability; omit to use `main` branch for the latest features
