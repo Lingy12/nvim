@@ -116,6 +116,14 @@ use({
     run = 'cd app && yarn install',
 })
 
+  use {
+    'coder/claudecode.nvim',
+    requires = { 'folke/snacks.nvim' },
+    config = function()
+      require('claudecode').setup()
+    end
+  }
+
   if packer_bootstrap then
     require('packer').sync()
   end
