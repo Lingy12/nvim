@@ -95,11 +95,35 @@ iron.setup {
 -- })
 }
 
--- iron also has a list of commands, see :h iron-commands for all available commands
-vim.keymap.set('n', '<space>rs', '<cmd>IronRepl<cr>')
-vim.keymap.set('n', '<space>rr', '<cmd>IronRestart<cr>')
-vim.keymap.set('n', '<space>rf', '<cmd>IronFocus<cr>')
-vim.keymap.set('n', '<space>rh', '<cmd>IronHide<cr>')
+local command_center = require("commander")
+
+command_center.add({
+  {
+    desc = "Start Iron REPL",
+    cmd = "<cmd>IronRepl<cr>",
+    keys = {"n", "<space>rs"},
+    cat = "REPL"
+  },
+  {
+    desc = "Restart Iron REPL",
+    cmd = "<cmd>IronRestart<cr>",
+    keys = {"n", "<space>rr"},
+    cat = "REPL"
+  },
+  {
+    desc = "Focus Iron REPL",
+    cmd = "<cmd>IronFocus<cr>",
+    keys = {"n", "<space>rf"},
+    cat = "REPL"
+  },
+  {
+    desc = "Hide Iron REPL",
+    cmd = "<cmd>IronHide<cr>",
+    keys = {"n", "<space>rh"},
+    cat = "REPL"
+  }
+})
+
 
 
 -- iron.setup {...

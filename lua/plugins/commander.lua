@@ -41,3 +41,4 @@ require("commander").setup({
   }
 })
 
+require('telescope').load_extension('commander')

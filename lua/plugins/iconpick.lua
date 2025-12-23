@@ -5,17 +5,20 @@ command_center.add({
   {
     desc = "Pick icon",
     cmd = "<cmd>IconPickerNormal<cr>",
-    keys = {"n", "<leader><leader>i", opts}
+    keys = {"n", "<leader><leader>i"},
+    cat = "Icons"
   },
   {
-    desc = "Yank an icon",
-    cmd = "<cmd>IconPickerYank<cr>", 
-    keys = {"n", "<leader><leader>y", opts}
+    desc = "Yank icon",
+    cmd = "<cmd>IconPickerYank<cr>",
+    keys = {"n", "<leader><leader>y"},
+    cat = "Icons"
   },
   {
-    desc = "Insert an icon",
+    desc = "Insert icon",
     cmd = "<cmd>IconPickerInsert<cr>",
-    keys = {"i", "<C-i>", opts}
+    keys = {"i", "<C-i>"},
+    cat = "Icons"
   }
 })
 -- vim.keymap.set("n", "<Leader><Leader>i", "<cmd>IconPickerNormal<cr>", opts)

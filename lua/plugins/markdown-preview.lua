@@ -4,8 +4,9 @@ local command_center = require("commander")
 
 command_center.add({
   {
-    desc='toggle markdown preview',
-    cmd='<cmd>MarkdownPreviewToggle<CR>',
-    keys={'n', '<leader>mm'}
+    desc = "Toggle markdown preview",
+    cmd = "<cmd>MarkdownPreviewToggle<CR>",
+    keys = {"n", "<leader>mm"},
+    cat = "Markdown"
   }
 })

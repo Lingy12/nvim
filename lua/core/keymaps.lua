@@ -5,59 +5,72 @@ local keymap = vim.keymap
 
 command_center.add({
   {
-    desc = "Exit nvim",
+    desc = "Exit insert mode",
     cmd = "<ESC>",
-    keys = {"i", "jk"}
+    keys = {"i", "jk"},
+    cat = "General"
   },
   {
-    desc = "Move cursor and select line below",
+    desc = "Move line down",
     cmd = ":m '>+1<CR>gv=gv",
-    keys = {"v", "J"}
+    keys = {"v", "J"},
+    cat = "Editing"
   },
   {
-    desc = "Move cursor and select line above",
+    desc = "Move line up",
     cmd = ":m '<-2<CR>gv=gv",
-    keys = {"v", "K"}
+    keys = {"v", "K"},
+    cat = "Editing"
   },
   {
-    desc = "Split a vertical window",
+    desc = "Split vertical window",
     cmd = "<C-w>v",
-    keys = {"n", "<leader>sv"}
+    keys = {"n", "<leader>sv"},
+    cat = "Windows"
   },
   {
-    desc = "Split a horizontal window",
+    desc = "Split horizontal window",
     cmd = "<C-w>s",
-    keys = {"n", "<leader>sh"}
+    keys = {"n", "<leader>sh"},
+    cat = "Windows"
   },
   {
-    desc = "Cancel highlight",
+    desc = "Clear search highlight",
     cmd = ":nohl<CR>",
-    keys = {"n", "<leader>nh"}
+    keys = {"n", "<leader>nh"},
+    cat = "General"
   },
   {
     desc = "Next buffer",
     cmd = ":bnext<CR>",
-    keys = {"n", "<S-L>"}
+    keys = {"n", "<S-L>"},
+    cat = "Buffers"
   },
   {
     desc = "Previous buffer",
     cmd = ":bprev<CR>",
-    keys = {"n", "<S-H>"}
+    keys = {"n", "<S-H>"},
+    cat = "Buffers"
   },
   {
     desc = "Close current buffer",
     cmd = ":BufDel<CR>",
-    keys = {"n", "S-C"}
+    keys = {"n", "S-C"},
+    cat = "Buffers"
   },
   {
-    desc = "Toggle nvim tree",
+    desc = "Toggle file explorer",
     cmd = ":NvimTreeToggle<CR>",
-    keys = {"n", "<leader>e"}
+    keys = {"n", "<leader>e"},
+    cat = "File Explorer"
+  },
+  {
+    desc = "Open command palette",
+    cmd = "<cmd>Telescope commander<CR>",
+    keys = {"n", "<leader>cc"},
+    cat = "General"
   }
 })
-
--- short cut for command command_center
-keymap.set("n", "<leader>cc", "<cmd>Telescope commander<CR>")
 -- keymap.set("i", "jk", "<ESC>")
 --
 -- keymap.set("v", "J", ":m '>+1<CR>gv=gv")

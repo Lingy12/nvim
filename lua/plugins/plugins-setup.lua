@@ -61,7 +61,7 @@ return require('packer').startup(function(use)
   use "lewis6991/gitsigns.nvim" -- git hint
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',  -- file explore
+    'nvim-telescope/telescope.nvim', tag = 'v0.2.0',  -- file explore
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   
@@ -115,6 +115,7 @@ use({
     "iamcco/markdown-preview.nvim",
     run = 'cd app && yarn install',
 })
+
   if packer_bootstrap then
     require('packer').sync()
   end
