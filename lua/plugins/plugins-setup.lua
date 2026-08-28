@@ -39,7 +39,7 @@ return require('packer').startup(function(use)
   
   use("christoomey/vim-tmux-navigator")
   
-  use "nvim-treesitter/nvim-treesitter" -- syntax highlighting
+  use { "nvim-treesitter/nvim-treesitter", branch = "master" } -- syntax highlighting
   use "p00f/nvim-ts-rainbow"
   
   use {
